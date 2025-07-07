@@ -1,0 +1,19 @@
+# Ignore everything in the data folder
+data/MURA-v1.1/train/*
+data/MURA-v1.1/valid/*
+
+# But allow XR_ELBOW data only
+!data/MURA-v1.1/train/XR_ELBOW/
+!data/MURA-v1.1/valid/XR_ELBOW/
+
+# Ignore model weights and report files
+*.pth
+*.pdf
+
+# Ignore Python cache
+__pycache__/
+*/__pycache__/
+
+# Ignore other large or temporary files
+*.log
+.DS_Store
