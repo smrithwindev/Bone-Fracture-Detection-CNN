@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from models.resnet_finetune import get_finetuned_resnet18
 from utils.data_loader import create_dataloaders
 
-def train_model(model, dataloaders, device, num_epochs=30, learning_rate=3, patience=7):
+def train_model(model, dataloaders, device, num_epochs=30, learning_rate=1e-5, patience=7):
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
 
