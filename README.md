@@ -13,21 +13,14 @@ Key Features
 • Confidence score display (Fracture/No Fracture)
 • Downloadable PDF report generation using FPDF
 • Early stopping, data augmentation, and transfer learning integrated
-<<<<<<< HEAD
 
-=======
->>>>>>> bf8f8ffe4d1b5577b4056b8f2bdc090fee65c34b
 How It Works
 
 1. Upload an X-ray image through the Streamlit interface.
 2. The image is preprocessed and passed through the ResNet-18 model.
 3. The model classifies the image as 'Fracture' or 'No Fracture' with a confidence score.
 4. Optionally, a PDF report with the diagnosis and timestamp is generated.
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> bf8f8ffe4d1b5577b4056b8f2bdc090fee65c34b
 Folder Structure
 • app/streamlit_app.py
 • models/resnet_finetune.py
@@ -50,7 +43,6 @@ Installation
    (This will generate models/best_model.pth)
 5. Launch the Streamlit app:
    streamlit run app/streamlit_app.py
-<<<<<<< HEAD
 
 Usage
 
@@ -58,23 +50,12 @@ Upload an X-ray image and click 'Predict'. The model will return the classificat
 If the trained model file is missing, the app will run in demo mode with an untrained model (for UI testing).
 Optionally, download the report as a PDF.
 
-=======
-   
-Usage
-Upload an X-ray image and click 'Predict'. The model will return the classification and confidence.
-If the trained model file is missing, the app will run in demo mode with an untrained model (for UI testing).
-Optionally, download the report as a PDF.
-
->>>>>>> bf8f8ffe4d1b5577b4056b8f2bdc090fee65c34b
 Model Details
 - ResNet-18 model pretrained on ImageNet
 - Fine-tuned by unfreezing layer2, layer3, layer4, and fc layers
 - Loss: CrossEntropyLoss | Optimizer: Adam | Epochs: 30 | Patience: 7
 - Training Accuracy: 91% | Validation F1 Score: ~80%
-<<<<<<< HEAD
 
-=======
->>>>>>> bf8f8ffe4d1b5577b4056b8f2bdc090fee65c34b
 Acknowledgements
 • MURA v1.1 dataset by Stanford ML Group
 • PyTorch for model building
